@@ -1,0 +1,38 @@
+/** TheBikeStore:
+Bikes (6, 3, 3560)
+Helmets (4, 3, 1056)
+Gloves (3, 3, 660)
+BikePumps (8, 2, 300)
+HeadLamps (4, 2, 66)
+KneePads (7, 6, 12)
+ElbowPads (10, 6, 77)
+Tires (3, 9, 190)
+Shoes (2, 8, 500)
+ValveStems (7, 3, 90)
+ChestProtectors (60, 5, 760)
+Tubes (80, 3, 800)
+Grips (99, 4, 400)
+Seats (5, 2, 400
+Pedals (80, 5, 966)
+**/
+
+CREATE TABLE TheBikeStore (id INTEGER PRIMARY KEY, item TEXT, phys_inv INTEGER, aisle TEXT, tot_price INTEGER);
+INSERT INTO TheBikeStore VALUES (1,"Bikes", 6, 3, 3560);
+INSERT INTO TheBikeStore VALUES (2, "Helmets", 4, 3, 1056);
+INSERT INTO TheBikeStore VALUES (3, "Gloves", 3, 3, 660);
+INSERT INTO TheBikeStore VALUES (4, "BikePumps", 8, 2, 300);
+INSERT INTO TheBikeStore VALUES (5, "HeadLamps", 4, 2, 66);
+INSERT INTO TheBikeStore VALUES (6, "KneePads", 7, 6, 12);
+INSERT INTO TheBikeStore VALUES (7, "ElbowPads", 10, 6, 77);
+INSERT INTO TheBikeStore VALUES (8, "Tires", 3, 9, 190);
+INSERT INTO TheBikeStore VALUES (9, "Shoes", 2, 8, 500);
+INSERT INTO TheBikeStore VALUES (10, "ValveStems", 7, 3, 90);
+INSERT INTO TheBikeStore VALUES (11, "ChestProtectors", 60, 5, 760);
+INSERT INTO TheBikeStore VALUES (12, "Tubes", 80, 3, 800);
+INSERT INTO TheBikeStore VALUES (13, "Grips", 99, 4, 860);
+INSERT INTO TheBikeStore VALUES (14, "Seats", 5, 2, 400);
+INSERT INTO TheBikeStore VALUES (15, "Pedals", 80, 5, 966);
+
+SELECT item FROM TheBikeStore ORDER BY tot_price;
+SELECT item, SUM (tot_price) FROM TheBikeStore GROUP BY tot_price;
+SELECT * FROM TheBikeStore;
